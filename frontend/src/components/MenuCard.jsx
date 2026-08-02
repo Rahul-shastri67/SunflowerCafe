@@ -59,10 +59,7 @@ function MenuCardComponent({ item, index }) {
             {item.name}
           </h3>
 
-          <p className="mt-2 text-sm leading-6 text-bark/60">
-            Freshly prepared with premium ingredients and served hot for
-            the best cafe experience.
-          </p>
+         
 
         </div>
 
@@ -75,9 +72,7 @@ function MenuCardComponent({ item, index }) {
             ₹{item.price}
           </span>
 
-          <button className="rounded-full bg-bark px-4 py-2 text-xs font-semibold text-white transition hover:bg-leaf">
-            Order
-          </button>
+          
 
         </div>
 
