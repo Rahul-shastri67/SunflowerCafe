@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 47% 95%;
+    --foreground: 20 26% 19%;
+    --card: 45 100% 98%;
+    --card-foreground: 20 26% 19%;
+    --popover: 45 100% 98%;
+    --popover-foreground: 20 26% 19%;
+    --primary: 20 26% 19%;
+    --primary-foreground: 43 47% 95%;
+    --secondary: 38 45% 89%;
+    --secondary-foreground: 20 26% 19%;
+    --muted: 38 45% 89%;
+    --muted-foreground: 22 15% 42%;
+    --accent: 43 92% 63%;
+    --accent-foreground: 20 26% 19%;
+    --destructive: 4 48% 44%;
+    --destructive-foreground: 43 47% 95%;
+    --border: 36 33% 84%;
+    --input: 36 33% 84%;
+    --ring: 99 36% 36%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: #f7c948;
+    color: #3e2c24;
+  }
+
+  :focus-visible {
+    outline: 2px solid #4d7c3a;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ---------------- Scrollbar ---------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f4ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9cbb2;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4b294;
+}
+
+/* Hide Scrollbar */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------- Marquee ---------------- */
+
+@keyframes marquee-drift {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-drift 45s linear infinite;
+  will-change: transform;
+}
+
+/* ---------------- Grain Animation ---------------- */
+
+@keyframes grain-shift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(-2%, 2%);
+  }
+
+  40% {
+    transform: translate(2%, -1%);
+  }
+
+  60% {
+    transform: translate(-1%, -2%);
+  }
+
+  80% {
+    transform: translate(1%, 2%);
+  }
+}
+
+.grain-overlay {
+  animation: grain-shift 9s steps(6) infinite;
+}
+
+/* ---------------- Utility ---------------- */
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.container-width {
+  @apply mx-auto max-w-7xl;
+}
+
+/* ---------------- Debug Wrapper ---------------- */
+
+[data-debug-wrapper="true"] {
+  display: contents !important;
+}
+
+[data-debug-wrapper="true"] > * {
+  margin: inherit;
+  padding: inherit;
+  gap: inherit;
+  border: inherit;
+}
