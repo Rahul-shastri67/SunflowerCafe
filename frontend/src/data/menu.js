@@ -103,7 +103,7 @@ export const CAFE = {
     name: "Sunflower Cafe",
     tagline: "Fresh • Homemade • Pure Vegetarian",
     address: "Near Sawalde Bridge, Dhela Road, Ramnagar, Uttarakhand – 244715",
-    phones: ["+91 9259128558 ", "• +91 6397228331"],
+    phones: ["+91 9259128558 ", " +91 6397228331"],
     email: "SunflowerCafe.19@gmail.com",
     hours: "Everyday · 10:00 AM – 9:00 PM",
     instagram: "https://www.instagram.com/its_sunflowercafe?igsh=ZTd2Z21tcTd4Nzlp",
