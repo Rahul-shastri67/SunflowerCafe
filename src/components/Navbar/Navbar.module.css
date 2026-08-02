@@ -1,0 +1,102 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: var(--nav-height-mobile);
+  display: flex;
+  align-items: center;
+  background: var(--color-cream);
+  border-bottom: 1px solid transparent;
+  transition: background 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.headerScrolled {
+  background: rgba(251, 243, 230, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: var(--color-line);
+  box-shadow: 0 6px 18px -14px rgba(59, 42, 30, 0.35);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-brown);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.logoIcon {
+  color: var(--color-sunflower);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vegBadge {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-leaf-deep);
+  background: rgba(79, 107, 69, 0.1);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.vegDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-leaf);
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  border: none;
+  background: var(--color-brown);
+  color: var(--color-warm-white);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  transition: box-shadow 220ms ease, background 220ms ease;
+}
+
+.menuBtn:hover {
+  background: #2c2015;
+  box-shadow: 0 8px 18px -10px rgba(59, 42, 30, 0.55);
+}
+
+@media (min-width: 640px) {
+  .vegBadge {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: var(--nav-height);
+  }
+  .logo {
+    font-size: 1.45rem;
+  }
+}
